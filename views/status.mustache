@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> partials/header }}
+  <title>Items App Stats</title>
+</head>
+<body>
+  {{> partials/main-navbar }}
+
+  <script src="libs/mustache/mustache.js"></script>
+  <script src="/scripts/status.js"></script>
+
+  <div class="container">
+    <div class="row my-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">Items Service</div>
+          <div class="card-body">
+            <div id="items-srv"></div>
+            <a href="#" id="items-srv-refresh-button" class="btn btn-primary">Refresh</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">Items Rating Service</div>
+          <div class="card-body">
+            <div id="items-ratings-srv"></div>
+            <a href="#" id="items-ratings-srv-refresh-button" class="btn btn-primary">Refresh</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" id="refresh-all-button" class="btn btn-primary">Refresh all</a>
+  </div>
+
+</body>
+</html>
