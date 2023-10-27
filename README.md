@@ -20,6 +20,41 @@ This is a web interface written Node JS that provides user friendly interface to
 
 4. Run web interface by executing `node start.js`
 
+### How to run the microservice in debug mode
+
+1. Run the microservice with debug options:
+```sh
+node --inspect=0.0.0.0:9229 start.js
+```
+or
+```sh
+node --inspect-brk=0.0.0.0:9229 start.js
+```
+
+2. Connect with your debugger.
+
+#### Debugger configuration for VSCode
+
+```json
+{   
+    "version": "0.2.0",
+    "configurations": [
+         {
+            "name": "Node: Attach",
+            "type": "node",
+            "request": "attach",
+            "address": "localhost",
+            "port": 9229,            
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/path/in/container",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+        }
+    ]
+}
+```
+
 ### License
 
 GNU GPL v2 or any later version.
